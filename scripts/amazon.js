@@ -1,5 +1,5 @@
 import { products } from "../data/products.js";
-import { addToCart } from "../data/cart.js";
+import { addToCart, cart } from "../data/cart.js";
 
 let productHTML = ``;
 
@@ -69,6 +69,8 @@ const updateCartQuantity = () => {
   cart.forEach((cartItem) => {
     cartQuantity += cartItem.quantity;
   });
+
+  console.log(cart);
 
   document.querySelector(".js-cart-quantity").innerHTML = cartQuantity;
 };
